@@ -1,0 +1,44 @@
+h1{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: #bcbcbc;
+    font-size: 4rem;
+    background-color: rgb(88, 88, 88);
+    margin: 0;
+}
+
+
+.container{
+    width: 100%;
+}
+
+.custom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: #d7d7d7;
+    font-size: 1.5rem;
+}
+
+span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h5, h6{
+    color: #ffffd2;
+}
+
+h6{
+    margin-left: 1rem;
+}
+
+.back{
+    background-color: #000000bc;
+    padding: 1rem 0;
+}

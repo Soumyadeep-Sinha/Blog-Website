@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.welcome{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000009f;
+    color: #fff6c5;
+    border-bottom: 2px solid white;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+}
+
+.card{
+    background: url("https://media3.giphy.com/media/l1Et7Qw1XjvunS0Io/giphy.gif?cid=ecf05e470wt8aztwdim4iinpgg2acowpvhptf88uuca0yp6i&ep=v1_gifs_related&rid=giphy.gif&ct=g");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #393939;
+    color: white;
+    margin: 0 0.5rem;
+}

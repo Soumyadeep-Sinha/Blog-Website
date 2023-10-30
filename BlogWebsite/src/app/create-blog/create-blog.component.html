@@ -1,0 +1,54 @@
+<div class="container mb-5">
+  <section class="left">
+    <h1>Create a blog post</h1>
+
+    <div class="container d-flex justify-content-center mt-3" style="width: 70%;">
+      <span class="input-group-text">Heading</span>
+      <input type="text" name="title" aria-label="Heading" [(ngModel)]="title" class="form-control">
+    </div>
+
+    <!-- <div class="container d-flex justify-content-center mt-3" style="width: 70%;">
+      <span class="input-group-text">Date</span>
+      <input type="date" aria-label="Date" class="form-control">
+    </div> -->
+
+    <div class="selectors">
+      <div>
+        <input type="radio" name="contentType" class="form-check-input" [(ngModel)]="selectedContentType" value="text"> Add Text
+      </div>
+      <div>
+        <input type="radio" name="contentType" class="form-check-input" [(ngModel)]="selectedContentType" value="image"> Add Image
+      </div>
+      <div>
+        <input type="radio" name="contentType" class="form-check-input" [(ngModel)]="selectedContentType" value="video"> Add Video
+      </div>
+    </div>
+
+    <div class="fn-btns">
+      <textarea [(ngModel)]="contentToAdd" placeholder="For image and video paste the link here and press Add content."></textarea>
+      <div class="btns">
+        <button (click)="addContent()" class="btn btn-success">Add Content</button>
+        <button (click)="deleteLastContent()" class="btn btn-danger">Delete Last</button>
+        <button (click)="savePost()" class="btn btn-info">Save Post</button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>How to create ?</h3>
+      <ul>
+        <li>Select any radio option from the three.</li>
+        <li>If it is a image or video, paste the link in the textbox and click add content.</li>
+        <li>If it is a paragraph Add the text to the textbox and press add content.</li>
+        <li>You can delete content from the last.</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="right container">
+    <h2>Preview</h2>
+    <div class="content-container">
+      <div *ngFor="let content of contentArray" [innerHTML]="content"></div>
+    </div>
+  </section>
+</div>

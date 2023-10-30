@@ -1,0 +1,40 @@
+<div class="container bg-dark d-flex align-items-center justify-content-center mt-3" style="padding: 2rem;">
+  <div class="d-flex flex-column" style="width: 40%;">
+    <h1 class="text-light">Username : {{data.username}}</h1>
+    <h4 class="text-light">Publisher Name : {{data.name}}</h4>
+    <h4 class="text-warning">Publisher ID : {{data.id}}</h4>
+    <h5 class="text-success">Total Blogs : {{size}}</h5>
+    <h5 class="text-dark" class="alert alert-{{style}}">{{notification}}</h5>
+  </div>
+  <div class="container bg-dark" style="border: 2px solid grey; padding: 1rem; border-radius:0.5rem; width:50%">
+    <form #userSignUpForm="ngForm" (ngSubmit)="Update(userSignUpForm.value)" class="signupForm">
+
+      <div class="form-group mt-3" style="display: none;">
+        <label for="username">Username</label>
+        <input type="text" [(ngModel)]="data.username" class="form-control" id="username" name="username" ngModel aria-describedby="username" placeholder="Enter username">
+      </div>
+      <div class="form-group mt-3">
+        <label for="exampleInputEmail1" class="text-light">Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="name" ngModel aria-describedby="emailHelp" placeholder="Enter name">
+      </div>
+      <div class="form-group mt-3">
+        <label for="exampleInputPassword1" class="text-light">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel placeholder="Password">
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4">Update Profile</button>
+    </form>
+  </div>
+</div>
+
+<h3 class="text-warning mt-5" style="text-align: center; background-color:rgba(0, 0, 0, 0.448); padding:1rem">Your Blogs</h3>
+
+<div class="container mt-3 mb-5 d-flex flex-wrap">
+  <div class="card mt-3" style="width: 18rem;" *ngFor="let blog of blogs">
+    <div class="card-body">
+      <h5 class="card-title">{{blog.title}}</h5>
+      <a [routerLink]="['/blogPage', blog.id]" class="btn btn-primary">View Blog</a>
+      <button (click)="deleteBlog(blog.id)" class="btn btn-danger" style="margin-left: 1rem;">Delete Blog</button>
+    </div>
+  </div>
+</div>

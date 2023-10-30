@@ -1,0 +1,15 @@
+.formSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.signupForm{
+    background-color: #2828289a;
+    width: 50%;
+    border: 2px solid #dcdada;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white;
+}

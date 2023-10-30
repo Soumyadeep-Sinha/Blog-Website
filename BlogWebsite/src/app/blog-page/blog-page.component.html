@@ -1,0 +1,12 @@
+<h1>{{ blog.title }}</h1>
+
+<div class="back">
+    <span>
+        <h5>By {{blog.publisher}}</h5>
+        <h6>{{blog.date | date}}</h6>
+    </span>
+    
+    <div class="container">
+        <div class="custom-content" [innerHTML]="blog.content"></div>
+    </div>
+</div>
