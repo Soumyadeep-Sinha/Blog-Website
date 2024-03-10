@@ -10,10 +10,12 @@ public class BlogService {
     @Autowired
     private BlogRepository blogRepository;
 
+    @SuppressWarnings("null")
     public BlogPost createBlog(BlogPost blogPost){
         return blogRepository.save(blogPost);
     }
 
+    @SuppressWarnings("null")
     public BlogPost getBlogById(Long id){
         return blogRepository.findById(id).orElse(null);
     }
@@ -26,6 +28,7 @@ public class BlogService {
         return blogRepository.findByUserId(userId);
     }
 
+    @SuppressWarnings("null")
     public void deletePost(Long id){
         blogRepository.deleteById(id);
     }
